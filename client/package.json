@@ -1,9 +1,19 @@
 {
   "name": "JATE",
   "scripts": {
-    "dev": "webpack-dev-server",
-    "build": "webpack --mode production",
-    "start": "webpack --watch"
+    "start:dev": "concurrently \"cd client && npm run build\" \"cd server && npm run server\"",
+    "start": "npm run build && cd server && node server.js",
+    "server": "cd server node server.js --ignore client",
+    "build": "cd client && npm run build",
+    "install": "cd client && npm install",
+    "client": "cd client && npm start",
+    "heroku-prebuild": "npm install --dev",
+
+    "build:client": "cd client && npm run build",
+    "build:server": "cd server && npm run build"
+   
+    }
+    
   },
   "author": "2U",
   "license": "UNLICENSED",

@@ -1,42 +1,21 @@
 {
-  "name": "JATE",
+  "name": "pwa-text-editor-on-or-offline",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "description": "// - Strategies: https://developers.google.com/web/tools/workbox/modules/workbox-strategies // - Precaching: https://developers.google.com/web/tools/workbox/modules/workbox-precaching",
+  "main": "index.js",
   "scripts": {
-    "start:dev": "concurrently \"npm run server\" \"npm run client\"",
-    "start": "node server.js",
-    "server": "nodemon server.js",
-    "build": "webpack --mode production",
-    "install": "echo \"Install script placeholder\"",
-    "client": "webpack-dev-server --mode development --open"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "cd client && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Berkeleycodingmomma/pwa-text-editor-on-or-offline.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4",
-    "@babel/preset-env": "^7.21.5",
-    "babel-loader": "^9.1.2",
-    "css-loader": "^6.7.4",
-    "express": "^4.17.1",
-    "html-webpack-plugin": "^5.5.1",
-    "if-env": "^1.0.4",
-    "style-loader": "^3.3.3",
-    "webpack-pwa-manifest": "^4.0.0"
+  "bugs": {
+    "url": "https://github.com/Berkeleycodingmomma/pwa-text-editor-on-or-offline/issues"
   },
-  "devDependencies": {
-    "concurrently": "^5.2.0",
-    "nodemon": "^2.0.4",
-    "webpack": "^5.66.0",
-    "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.7.2",
-    "workbox-webpack-plugin": "^6.5.4"
-  }
+  "homepage": "https://github.com/Berkeleycodingmomma/pwa-text-editor-on-or-offline#readme"
 }

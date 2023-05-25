@@ -12,7 +12,7 @@ module.exports = () => {
     },
     output: {
       filename: '[name].bundle.js',
-      path: path.resolve(__dirname, 'dist'),
+      path: path.resolve(__dirname, 'src'),
     },
     plugins: [
       // Generate HTML file with dynamic script injection
@@ -22,7 +22,7 @@ module.exports = () => {
       }),
       // Generate service worker from a workbox configuration file
       new InjectManifest({
-        swSrc: './src-sw.js',
+        swSrc: './src/src-sw.js',
         swDest: 'sw.js',
       }),
       // Generate web app manifest file
@@ -34,7 +34,7 @@ module.exports = () => {
         theme_color: '#000000',
         icons: [
           {
-            src: path.resolve('src/assets/icon.png'),
+            src: path.resolve('./src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
           },
         ],
