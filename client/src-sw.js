@@ -1,10 +1,10 @@
-const { offlineFallback, warmStrategyCache } = require('workbox-recipes');
-const { CacheFirst } = require('workbox-strategies');
-const { registerRoute } = require('workbox-routing');
-const { CacheableResponsePlugin } = require('workbox-cacheable-response');
-const { ExpirationPlugin } = require('workbox-expiration');
-const { precacheAndRoute } = require('workbox-precaching/precacheAndRoute');
+import { precacheAndRoute } from 'workbox-precaching';
+import { registerRoute } from 'workbox-routing';
+import { CacheFirst } from 'workbox-strategies';
+import { CacheableResponsePlugin } from 'workbox-cacheable-response';
+import { ExpirationPlugin } from 'workbox-expiration';
 
+// Precache and route the assets specified in the __WB_MANIFEST variable
 precacheAndRoute(self.__WB_MANIFEST);
 
 const pageCache = new CacheFirst({
@@ -14,17 +14,44 @@ const pageCache = new CacheFirst({
       statuses: [0, 200],
     }),
     new ExpirationPlugin({
-      maxAgeSeconds: 30 * 24 * 60 * 60,
+      maxAgeSeconds: 30 * 24 * 60 * 60, // Cache pages for 30 days
     }),
   ],
 });
 
-warmStrategyCache({
-  urls: ['/index.html', '/'],
-  strategy: pageCache,
+// Warm the page cache with specific URLs
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(pageCache.cacheName).then((cache) => {
+      return cache.addAll(['/index.html', '/']);
+    })
+  );
 });
 
-registerRoute(({ request }) => request.mode === 'navigate', pageCache);
+// Route requests for navigation to the page cache
+registerRoute(
+  ({ request }) => request.mode === 'navigate',
+  ({ event }) => pageCache.handle({ event })
+);
 
-// TODO: Implement asset caching
-registerRoute();
+
+// Cache CSS and JS files using a StaleWhileRevalidate strategy
+registerRoute(
+  /\.(?:css|js)$/,
+  new StaleWhileRevalidate({
+    cacheName: 'asset-cache',
+    plugins: [
+      new CacheableResponsePlugin({
+        statuses: [0, 200],
+      }),
+      new ExpirationPlugin({
+        maxAgeSeconds: 30 * 24 * 60 * 60, // Cache assets for 30 days
+      }),
+    ],
+  })
+);
+
+// For more advanced asset caching strategies, you can refer to the Workbox documentation:
+// - Strategies: https://developers.google.com/web/tools/workbox/modules/workbox-strategies
+// - Precaching: https://developers.google.com/web/tools/workbox/modules/workbox-precaching
+
