@@ -12,52 +12,50 @@ module.exports = () => {
     },
     output: {
       filename: '[name].bundle.js',
-      path: path.resolve(__dirname, 'src'),
+      path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      // Generate HTML file with dynamic script injection
       new HtmlWebpackPlugin({
-        template: './src/index.html',
-        chunks: ['main'],
+        template: './index.html',
+        title: 'JATE',
       }),
-      // Generate service worker from a workbox configuration file
       new InjectManifest({
-        swSrc: './src/src-sw.js',
-        swDest: 'sw.js',
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js',
       }),
-      // Generate web app manifest file
       new WebpackPwaManifest({
-        name: 'Your Text Editor Web App',
-        short_name: 'Text Editor',
-        description: 'A text editor web application',
-        background_color: '#ffffff',
-        theme_color: '#000000',
+        fingerprints: false,
+        inject: true,
+        name: "Just Another Text Editor",
+        short_name: "JATE",
+        description: "PWA Text Editor App",
+        background_color: "#225ca3",
+        theme_color: "#225ca3",
+        start_url: "./",
+        publicPath: "./",
         icons: [
           {
-            src: path.resolve('./src/images/logo.png'),
-            sizes: [96, 128, 192, 256, 384, 512],
+            src: path.resolve("./src/images/logo.png"),
+            sizes: [16, 96, 128, 192, 256, 384, 512],
+            destination: path.join("assets", "icons"),
           },
         ],
-        start_url: '/',
-        display: 'standalone',
       }),
     ],
-
     module: {
       rules: [
-        // Add CSS loaders to handle CSS files
         {
-          test: /\.css$/,
+          test: /\.css$/i,
           use: ['style-loader', 'css-loader'],
         },
-        // Add Babel loader for next-gen JavaScript support
         {
-          test: /\.js$/,
+          test: /\.m?js$/,
           exclude: /node_modules/,
           use: {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-env'],
+              plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
             },
           },
         },
@@ -65,3 +63,5 @@ module.exports = () => {
     },
   };
 };
+
+
