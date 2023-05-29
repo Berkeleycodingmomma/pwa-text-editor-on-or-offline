@@ -111,10 +111,23 @@ Each endpoint must include the necessary data in the request body or URL paramet
 #
 
 ## Installation Process:
-1. Obtain the repository by either cloning it from GitHub or downloading the zip folder.
-2. Open the repository in your preferred source code editor.
-3. Launch the integrated terminal within the editor and follow the installation instructions mentioned in the "Built With" section of the provided documentation to ensure that the cloned code functions properly.
+1. Clone the starter code repository.
+2. Navigate to the repository directory.
+3. Install the required dependencies.
+4. Start the backend server and serve the client.
+5. Build the JavaScript files using webpack.
+6. Run the webpack plugins to generate additional files.
+7. Ensure your application is using supported next-gen JavaScript features.
+8. Open the text editor in your web browser to create IndexedDB storage.
+9. Enter content in the text editor and let it save automatically.
+10. Close and reopen the text editor to retrieve the saved content.
+11. Click the "Install" button to download the web application as an icon.
+12. Load the web application from the downloaded icon on your desktop.
+13. Ensure the service worker is registered using Workbox.
+14. Pre-cache static assets, including subsequent pages, using the service worker.
+15. Deploy the application to Heroku, considering proper build scripts.
 
+#
 ## Built With:
 
 - Express: [Download Express](https://www.npmjs.com/package/express)
@@ -138,21 +151,9 @@ Each endpoint must include the necessary data in the request body or URL paramet
 - babel: [Download babel](https://www.npmjs.com/package/babel)
 - code-mirror-themes: [Download code-mirror-themes](https://www.npmjs.com/package/code-mirror-themes)
 - idb: [Download idb](https://www.npmjs.com/package/idb)
-
-
-
-
-
-- JSON: [JSON](https://www.npmjs.com/package/json)
-- Dynamic JavaScript
-- Mongoose: [7.0.3](https://www.npmjs.com/package/mongoose)
-- Express: [4.18.2](https://www.npmjs.com/package/express)
-- Node.js: [16.18.1](https://nodejs.org/en/blog/release/v16.18.1/)
-- Insomnia: [by Kong](https://insomnia.rest/)
-- MongoDB: [Website](https://www.mongodb.com/)
-- Nodemon: [2.0.12](https://www.npmjs.com/package/nodemon/v/2.0.12)
-- License Badge: [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0))
+- License Badge: [MIT](https://opensource.org/licenses/MIT))
 - Visual Studio Code: [Website](https://code.visualstudio.com/)
+- - Heroku CLI: [Download Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
 
 ## Code Snippets 
 #
