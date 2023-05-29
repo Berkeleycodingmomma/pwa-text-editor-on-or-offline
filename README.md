@@ -1,13 +1,13 @@
 # pwa-text-editor-on-or-offline
 
-// - Strategies: https://developers.google.com/web/tools/workbox/modules/workbox-strategies
-// - Precaching: https://developers.google.com/web/tools/workbox/modules/workbox-precaching
 
+
+```sh
 
 <iframe src="https://drive.google.com/file/d/18nrwA2vs7NWTacLipcb8ZEIOe5h9lyCk/preview" width="640" height="480"></iframe>
 
+```
 
-https://youtu.be/tsxejVJhqBI
 
 
 
@@ -18,9 +18,8 @@ https://youtu.be/tsxejVJhqBI
 
 ## Description.
 
-This is an API built on Node.js that enables users to perform CRUD operations on data models related to social networking. It utilizes a NoSQL database and offers support for various models such as friends, users, thoughts, and reactions. These models can be retrieved either by their unique IDs or in their entirety. By leveraging the power of Node.js and Mongoose, this API provides a user-friendly and scalable solution for managing social networking data, removing the limitations typically associated with traditional relational databases.
+In this challenge, you are asked to build a browser-based text editor that works online and offline. It should save content using IndexedDB, be a Progressive Web App (PWA), and use idb for database interaction. Implement a client-server folder structure, bundle JavaScript files with webpack, and handle modern JavaScript. Provide desktop installation and deploy to Heroku with proper build scripts.
 #
-
 ## Table of Contents:
 - [Overview](#Overview)
 - [The Challenge](#The-Challenge)
@@ -37,90 +36,52 @@ This is an API built on Node.js that enables users to perform CRUD operations on
 # Overview
 
 ## The Challenge:
+The challenge is to create a text editor that works in a web browser and can be used offline. It should store data using IndexedDB as a backup option. You will use the idb package to handle data storage. The finished project needs to be deployed to Heroku. The goal is to build a reliable tool for creating and saving notes or code snippets, accessible both online and offline.
 
-The task involved creating a RESTful API for a social media startup, enabling them to carry out CRUD operations on data models for users, thoughts, and reactions. The API was developed utilizing Node.js and Mongoose, with a focus on scalability to handle substantial volumes of unstructured data.
-
-API must allow users to:
-
-- Create and delete user accounts.
-- Create, read, update, and delete thoughts.
-- Add and remove reactions to thoughts.
-- Add and remove friends to a user's friend list.
-
-Test API: use Insomnia or a similar tool to send HTTP requests to the API endpoints and verify that the responses are correct.
-#
-## Assigned User Story:
-```
-AS A social media startup
-I WANT an API for my social network that uses a NoSQL database
-SO THAT my website can handle large amounts of unstructured data
-```
-
-## Acceptance Criteria:
-```
-GIVEN a social network API
-WHEN I enter the command to invoke the application
-THEN my server is started and the Mongoose models are synced to the MongoDB database
-WHEN I open API GET routes in Insomnia for users and thoughts
-THEN the data for each of these routes is displayed in a formatted JSON
-WHEN I test API POST, PUT, and DELETE routes in Insomnia
-THEN I am able to successfully create, update, and delete users and thoughts in my database
-WHEN I test API POST and DELETE routes in Insomnia
-THEN I am able to successfully create and delete reactions to thoughts and add and remove 
-friends to a user’s friend list
-
-```
 
 ## Usage Instructions:
+###Following these instructions will allow you to create and retrieve notes or code snippets reliably using the text editor web application, both with and without an internet connection.
 
-1. Repository: Access the open documentation and run 'npm i' to install the necessary dependencies. Don't forget to update the '.env' file.
-2. In the project's root directory, create a file named '.env' and include the following variables.
-3. Once the server is up and running, you can utilize a tool like Insomnia to test the API endpoints.
-4. With Insomnia, test the routes for categories, products, and tags using the API's GET, POST, PUT, and DELETE methods. Ensure that data creation, updating, and deletion operations are successful within the database by testing the route at http://localhost:3001.
+1. Open the text editor web application in your editor.
+2. Upon opening, you should see a client-server folder structure.
+3. From the root directory, run npm run start to start up the backend and serve the client.
+4. Run the text editor application from your terminal, ensuring that your JavaScript files are bundled using webpack.
+5. Run your webpack plugins to generate an HTML file, service worker, and manifest file.
+6. Utilize next-gen JavaScript in your application, ensuring that the text editor functions in the browser without errors.
+7. When you open the text editor, IndexedDB should immediately create a database storage.
+8. Enter content in the text editor and click off the DOM window to save the content using IndexedDB.
+9. Upon reopening the text editor after closing it, the content should be retrieved from IndexedDB.
+10. Click on the Install button to download the web application as an icon on your desktop.
+11. Load the web application, which should register a service worker using workbox.
+12. Upon registering the service worker, your static assets should be pre-cached upon loading, including subsequent pages and static assets.
+13. When deploying to Heroku, ensure you have proper build scripts for a webpack application.
 
-#### Available Endpoints:
+#
+## GitHub Repository: 
+[GitHub Repository:](https://github.com/Berkeleycodingmomma/pwa-text-editor-on-or-offline)
 
-Each endpoint must include the necessary data in the request body or URL parameters as specified in the acceptance criteria.
-
-1. GET /api/users - get all users
-2. GET /api/users/:userId - get a single user by ID
-3. POST /api/users - create a new user
-4. PUT /api/users/:userId - update a user by ID
-5. DELETE /api/users/:userId - delete a user by ID
-6. GET /api/thought - get all thought
-7. GET /api/thought/:thoughtId - get a single thought by ID
-8. POST /api/thought - create a new thought
-9. PUT /api/thought/:thoughtId - update a thought by ID
-10. DELETE /api/thought/:thoughtId - delete a thought by ID
-11. POST /api/thought/:thoughtId/reactions - add a reaction to a thought
-12. DELETE /api/thought/:thoughtId/reactions/:reactionId - remove a reaction from a thought
-13. POST /api/users/:userId/friends/:friendId - add a friend to a user's friend list
-14. DELETE /api/users/:userId/friends/:friendId - remove a friend from a user's friend list
-
-## GitHub Repository:
-[GitHub Repository:](https://github.com/Berkeleycodingmomma/you-and-your-friends-api-social-network)
-
-## YouTube Walkthrough Video:
-[Click Here to Watch](https://youtu.be/xsS7M2-5MhM)
+## YouTube Demo Walkthrough Video:
+[Click Here to Watch](https://youtu.be/tsxejVJhqBI)
 
 ## Screenshots:
-### Figure 1. Screeshot of project
+### Figure 1. After User types out a comment, they click the Install button. User can close browser, search for the link again and it will bring up the site with any context that was priviously inserted before "install".
 
 <img width="1431" alt="Screen Shot 2023-05-28 at 8 09 48 PM" src="https://github.com/Berkeleycodingmomma/pwa-text-editor-on-or-offline/assets/127444682/eb31996b-a0cc-4105-ac33-5ad26ce525dd">
 
-### Figure 2. Screeshot of project
+### Figure 2. After site was brought back up through the search browser with the privious context, user can open the console and see 
+the manifest.json file. 
 
 <img width="733" alt="Screen Shot 2023-05-28 at 8 10 40 PM" src="https://github.com/Berkeleycodingmomma/pwa-text-editor-on-or-offline/assets/127444682/b6f4c081-3082-4db6-ae63-d6486ffc7871">
 
-### Figure 3. Screeshot of project
+### Figure 3. The following image shows the application's registered service worker
 
 <img width="742" alt="Screen Shot 2023-05-28 at 8 10 54 PM" src="https://github.com/Berkeleycodingmomma/pwa-text-editor-on-or-offline/assets/127444682/07135d3d-ffa6-4633-ac6c-a8d1113a7537">
 
-### Figure 4. Screeshot of project
+### Figure 4. The image below shows the application's IndexedDB storage:
 
 <img width="732" alt="Screen Shot 2023-05-28 at 8 11 31 PM" src="https://github.com/Berkeleycodingmomma/pwa-text-editor-on-or-offline/assets/127444682/f1642ffb-180b-466e-9084-3f1465042ac4">
 
-### Figure 5. Screeshot of project
+### Figure 5. Lastly, this image show the "Cache Storage" in the console. It is a storage mechanism for caching network requests and responses, enabling offline access and optimizing web application performance.
 
 <img width="1426" alt="Screen Shot 2023-05-28 at 8 11 47 PM" src="https://github.com/Berkeleycodingmomma/pwa-text-editor-on-or-offline/assets/127444682/89f3c432-1b27-43f9-9805-11675cddb277">
 
@@ -170,6 +131,10 @@ Each endpoint must include the necessary data in the request body or URL paramet
 - License Badge: [MIT](https://opensource.org/licenses/MIT))
 - Visual Studio Code: [Website](https://code.visualstudio.com/)
 - Heroku CLI: [Download Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
+
+Extra resources that I used to complete this challenge: 
+ - Strategies: https://developers.google.com/web/tools/workbox/modules/workbox-strategies
+ - Precaching: https://developers.google.com/web/tools/workbox/modules/workbox-precaching
 
 ## Code Snippets 
 #
@@ -263,16 +228,22 @@ registerRoute(
 #
 
 ## What I Learned:
-1. Developed a RESTful API using Node.js and Mongoose.
-2. Employed a NoSQL database to efficiently manage unstructured data.
-3. Established endpoints to facilitate CRUD operations on data models for users, thoughts, and reactions.
-4. Implemented additional endpoints to enable the addition and removal of friends from a user's friend list.
-5. Thoroughly tested API endpoints using the Insomnia tool.
-6. Proficiently handled HTTP requests and processed JSON-formatted data.
-7. Ensured security and confidentiality by utilizing environment variables and .env files for sensitive data storage.
-#
+###In this challenge, as a software engineering bootcamp student, I have learned to:
 
+- Build a web-based text editor.
+- Enable offline functionality using a Progressive Web App (PWA) approach.
+- Store data persistently using IndexedDB.
+- Implement immediate database storage for efficient usage.
+- Save and retrieve content within the text editor.
+- Set up a client-server folder structure.
+- Bundle JavaScript files using webpack.
+- Generate essential files (HTML, service worker, manifest).
+- Write compatible code in next-gen JavaScript.
+- Install the app as a desktop icon.
+- Register a service worker for offline caching.
+- Deploy the app to Heroku with appropriate build scripts.
 
+In closing, through this challenge I have gained valuable experience in creating a web text editor with offline capabilities, utilizing IndexedDB for data storage, and deploying it to Heroku while ensuring optimal performance.
 
 ## License & Copyright ©
 #
