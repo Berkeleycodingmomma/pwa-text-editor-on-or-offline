@@ -1,19 +1,5 @@
 # pwa-text-editor-on-or-offline
 
-
-
-```sh
-
-<iframe src="https://drive.google.com/file/d/18nrwA2vs7NWTacLipcb8ZEIOe5h9lyCk/preview" width="640" height="480"></iframe>
-
-```
-
-
-
-
-
-# You & Your Friends; API Social Network 
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [Open Source Initiative Link](https://opensource.org/licenses/MIT)
 
 ## Description.
@@ -40,7 +26,7 @@ The challenge is to create a text editor that works in a web browser and can be 
 
 
 ## Usage Instructions:
-###Following these instructions will allow you to create and retrieve notes or code snippets reliably using the text editor web application, both with and without an internet connection.
+Following these instructions will allow you to create and retrieve notes or code snippets reliably using the text editor web application, both with and without an internet connection.
 
 1. Open the text editor web application in your editor.
 2. Upon opening, you should see a client-server folder structure.
