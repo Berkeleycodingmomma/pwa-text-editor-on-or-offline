@@ -106,7 +106,26 @@ Each endpoint must include the necessary data in the request body or URL paramet
 ## Screenshots:
 ### Figure 1. Screeshot of project
 
-![Screen Shot 2023-05-23 at 5 07 39 PM](https://github.com/Berkeleycodingmomma/you-and-your-friends-api-social-network/assets/127444682/10b5d1a3-7a1e-40cc-b54e-a2d1009997df)
+
+
+
+### Figure 2. Screeshot of project
+
+
+
+
+### Figure 3. Screeshot of project
+
+
+
+
+### Figure 4. Screeshot of project
+
+
+
+
+### Figure 5. Screeshot of project
+
 
 #
 
@@ -174,7 +193,7 @@ require('./routes/htmlRoutes')(app);
 app.listen(PORT, () => console.log(`Now listening on port: ${PORT}`))
 
 
-This code initializes an Express server, serves static files from the "../client/dist" directory, handles URL-encoded and JSON 
+**This code initializes an Express server, serves static files from the "../client/dist" directory, handles URL-encoded and JSON 
 data in requests, sets up HTML-related routes, and starts the server on a specified port.
 
 ```
@@ -185,7 +204,7 @@ data in requests, sets up HTML-related routes, and starts the server on a specif
 
  <!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>J.A.T.E</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/mode/javascript/javascript.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/theme/monokai.min.css"><script defer="defer" src="main.bundle.js"></script><script defer="defer" src="install.bundle.js"></script><meta name="theme-color" content="#225ca3" /><link rel="manifest" href="./manifest.json" /></head><body><nav id="navbar"><div class="nav-btn"><a class="btn btn-sm btn-dark" id="buttonInstall" role="button">Install!</a></div><h1>Just Another Text Editor</h1><div class="navbar-brand"><img src="./assets/icons/icon_96x96.png"/></div></nav><main id="main"><div class="loading-container"><div class="loading-spinner"></div></div></main></body></html>
   
-The above code provided appears as it does in the "dist" files because it has been processed and transformed by the build tools     webpack, which applied optimizations, minification, and asset management techniques to produce a final version of the 
+**The above code provided appears as it does in the "dist" files because it has been processed and transformed by the build tools     webpack, which applied optimizations, minification, and asset management techniques to produce a final version of the 
 code for deployment.
 
 ```
@@ -206,7 +225,7 @@ registerRoute(
   })
 );
 
-This code registers a route handler that caches and serves assets (styles, scripts, and workers) using the Stale-While-Revalidate # strategy with specified cache settings.
+**This code registers a route handler that caches and serves assets (styles, scripts, and workers) using the Stale-While-Revalidate # strategy with specified cache settings.
 
 ```
 #
@@ -241,7 +260,7 @@ This code registers a route handler that caches and serves assets (styles, scrip
           },
         ],
 
-This code configures various plugins for webpack, including HtmlWebpackPlugin, InjectManifest, and WebpackPwaManifest, to generate a Progressive Web App (PWA) text editor called "JATE" with specified settings and assets.
+**This code configures various plugins for webpack, including HtmlWebpackPlugin, InjectManifest, and WebpackPwaManifest, to generate a Progressive Web App (PWA) text editor called "JATE" with specified settings and assets.
 
 ```
 #
