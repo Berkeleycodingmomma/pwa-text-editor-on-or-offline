@@ -106,26 +106,23 @@ Each endpoint must include the necessary data in the request body or URL paramet
 ## Screenshots:
 ### Figure 1. Screeshot of project
 
-
-
+<img width="1431" alt="Screen Shot 2023-05-28 at 8 09 48 PM" src="https://github.com/Berkeleycodingmomma/pwa-text-editor-on-or-offline/assets/127444682/eb31996b-a0cc-4105-ac33-5ad26ce525dd">
 
 ### Figure 2. Screeshot of project
 
-
-
+<img width="733" alt="Screen Shot 2023-05-28 at 8 10 40 PM" src="https://github.com/Berkeleycodingmomma/pwa-text-editor-on-or-offline/assets/127444682/b6f4c081-3082-4db6-ae63-d6486ffc7871">
 
 ### Figure 3. Screeshot of project
 
-
-
+<img width="742" alt="Screen Shot 2023-05-28 at 8 10 54 PM" src="https://github.com/Berkeleycodingmomma/pwa-text-editor-on-or-offline/assets/127444682/07135d3d-ffa6-4633-ac6c-a8d1113a7537">
 
 ### Figure 4. Screeshot of project
 
-
-
+<img width="732" alt="Screen Shot 2023-05-28 at 8 11 31 PM" src="https://github.com/Berkeleycodingmomma/pwa-text-editor-on-or-offline/assets/127444682/f1642ffb-180b-466e-9084-3f1465042ac4">
 
 ### Figure 5. Screeshot of project
 
+<img width="1426" alt="Screen Shot 2023-05-28 at 8 11 47 PM" src="https://github.com/Berkeleycodingmomma/pwa-text-editor-on-or-offline/assets/127444682/89f3c432-1b27-43f9-9805-11675cddb277">
 
 #
 
