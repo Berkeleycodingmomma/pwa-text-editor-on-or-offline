@@ -44,10 +44,10 @@ Following these instructions will allow you to create and retrieve notes or code
 
 #
 ## GitHub Repository: 
-[GitHub Repository:](https://github.com/Berkeleycodingmomma/pwa-text-editor-on-or-offline)
+[GitHub Repository](https://github.com/Berkeleycodingmomma/pwa-text-editor-on-or-offline)
 
 ## Heroku Link:
-[Deployed Heroku Link:](https://secret-lowlands-49921.herokuapp.com/)
+[Deployed Heroku Link](https://secret-lowlands-49921.herokuapp.com/)
 
 ## YouTube Demo Walkthrough Video:
 [Click Here to Watch](https://youtu.be/tsxejVJhqBI)
